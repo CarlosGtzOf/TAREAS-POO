@@ -34,6 +34,8 @@
 
 ---
 
+![vsc.png](https://github.com/CarlosGtzOf/TAREAS-POO/blob/master/images/vsc.png)
+
 1. Debemos ir a __Google__ a buscar [Visual Studio Code](https://www.google.com/search?sxsrf=ACYBGNSRqQsIrRVbSlUU7rMppF_Aguf_5g%3A1568270754427&ei=oul5XbnTGcXV-gTvhKvYCg&q=Visual+Studio+Code&oq=Visual+Studio+Code&gs_l=psy-ab.3..35i39j0l3j0i67l2j0l4.1726.6689..7031...0.2..0.195.979.0j6......0....1..gws-wiz.......0i71j35i305i39j0i7i10i30j0i10.4axb79sRn8U&ved=0ahUKEwi5rOrp18rkAhXFqp4KHW_CCqsQ4dUDCAs&uact=5)
 
 ![visgoogle.png](https://github.com/CarlosGtzOf/TAREAS-POO/blob/master/images/visgoogle.png)
@@ -77,6 +79,8 @@
 # INSTALACION DE GIT. CONECTANDO CON CUENTA PERSONAL Y VISUAL STUDIO CODE
 
 ---
+
+![git.png](https://github.com/CarlosGtzOf/TAREAS-POO/blob/master/images/git.png)
 
 1. Primero iremos a google y buscaremos [Git](https://github.com/FelixELM/POO/blob/master/Setup/Imagenes/git1.PNG)
 
