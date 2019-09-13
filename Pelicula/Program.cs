@@ -50,7 +50,22 @@ namespace Pelicula
             return this.Pais;
         }
         
+        public Peli() 
+        {
 
+		}
+		public Peli(string titulo, Int16 año, string director, string pais)
+        {
+			this.Titulo = titulo;
+			this.Año = año;
+            this.Director = director;
+            this.Pais = pais;
+		}
+
+        public void print()
+        {
+            Console.WriteLine("{0}, {1}, {2}, {3}\n", this.Titulo, this.Año, this.Director, this.Pais);
+        }
         
     }
 
@@ -69,8 +84,10 @@ namespace Pelicula
             p2.SetAño(2003);
             p2.SetDirector("Peter Jackson");
             p2.SetPais("New Zealand, United States");
+
+            p1.print();
+            p2.print();
             
-            Console.WriteLine("{0}, {1}, {2}, {3}\n{4}, {5}, {6}, {7}", p1.GetTitulo(), p1.GetAño(), p1.GetDirector(),p1.GetPais(), p2.GetTitulo(), p2.GetAño(), p2.GetDirector(), p2.GetPais());
         }
     }
 }
