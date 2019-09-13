@@ -2,7 +2,7 @@
 
 namespace Pelicula
 {
-    //sin metodos
+    //metodos
     class pelicula
     {
         
