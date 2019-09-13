@@ -2,19 +2,15 @@
 
 namespace Pelicula
 {
-    //metodos
+    //sin metodos
     class pelicula
     {
         
         public String titulo;
-        public String año;
-        public String titulo2;
-        public String año2;
+        public Int16 año;
+        public String director;
+        public String pais;
 
-        public void print()
-        {
-            Console.WriteLine("{0}, {1}\n{2}, {3}", titulo, año, titulo2, año2);
-        }
 
     }
     class Program
@@ -22,14 +18,20 @@ namespace Pelicula
         static void Main(string[] args)
         {
             pelicula p1 = new pelicula();
+            pelicula p2 = new pelicula();
 
             p1.titulo = "Black Panter";
-            p1.año = "2018";
+            p1.año = 2018;
+            p1.director = "Ryan Coogler";
+            p1.pais = "Cataratas del Iguazú";
 
-            p1.titulo2 = "Lord Of The Rings Return Of The King";
-            p1.año2 = "2003";
+            p2.titulo = "Lord Of The Rings Return Of The King";
+            p2.año = 2003;
+            p2.director = "Peter Jackson";
+            p2.pais = "New Zealand, United States";
 
-            p1.print();
+            Console.WriteLine("{0}, {1}, {2}, {3}\n{4}, {5}, {6}, {7}", p1.titulo, p1.año, p1.director, p1.pais, p2.titulo, p2.año, p2.director, p2.pais);
+            
         }
     }
 }
