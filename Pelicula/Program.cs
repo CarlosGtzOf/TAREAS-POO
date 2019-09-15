@@ -65,16 +65,7 @@ namespace Peliculas
             p1.print();
             p2.print();
             */
-            /*List<String> personas = new List<String>();
-
-            personas.Add("Birdman, 2018");
-            personas.Add("12 años de esclavitud, 2014");
-            personas.Add("El artista, 2012");
-            personas.Add("Bohemian Rhapsody, 2018");
-            personas.Add("Shakespeare in love, 1999");
-            foreach (string s in personas)
-
-            Console.WriteLine(s);*/
+            
 
             List<Pelicula> peliculas = new List<Pelicula>();
 
