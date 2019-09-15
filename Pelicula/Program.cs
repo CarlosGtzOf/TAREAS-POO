@@ -1,14 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace Pelicula
+namespace Peliculas
 {
     //metodos
-    class Peli
-    {
-        private String Titulo;
+    class Pelicula    {
+        private string Titulo;
         private Int16 Año;
-        private String Pais;
-        private String Director;
+        private string Pais;
+        private string Director;
 
         public void SetTitulo(string titulo)
         {
@@ -29,64 +29,65 @@ namespace Pelicula
         {
             return this.Año;
         }
-
-        public void SetDirector(string director)
-        {
-            this.Director = director;
-        }
-
-        public String GetDirector()
-        {
-            return this.Director;
-        }
-
-        public void SetPais(string pais)
-        {
-            this.Pais = pais;
-        }
-
-        public String GetPais()
-        {
-            return this.Pais;
-        }
         
-        public Peli() 
+        public Pelicula() 
         {
 
 		}
-		public Peli(string titulo, Int16 año, string director, string pais)
+		public Pelicula(string titulo, Int16 año)
         {
 			this.Titulo = titulo;
 			this.Año = año;
-            this.Director = director;
-            this.Pais = pais;
 		}
 
-        public void print()
+        public void imprime() 
         {
-            Console.WriteLine("{0}, {1}, {2}, {3}\n", this.Titulo, this.Año, this.Director, this.Pais);
-        }
+			Console.WriteLine("{0}, {1}", this.Titulo, this.Año);
+		}
         
     }
 
     class Program
     {
+
         static void Main(string[] args)
         {
-            Peli p1 = new Peli();
-            Peli p2 = new Peli();
+            /*Pelicula p1 = new Pelicula();
+            Pelicula p2 = new Pelicula();
             p1.SetTitulo("Black Panter");
-            p1.SetAño(2018); 
-            p1.SetDirector("Ryan Coogler");
-            p1.SetPais("Cataratas del Iguazú");
+            p1.SetAño(2018);
 
             p2.SetTitulo("Lord Of The Rings Return Of The King");
-            p2.SetAño(2003);
-            p2.SetDirector("Peter Jackson");
-            p2.SetPais("New Zealand, United States");
+                p2.SetAño(2003);
+                p2.SetDirector("Peter Jackson");
+                p2.SetPais("New Zealand, United States");
 
             p1.print();
             p2.print();
+            */
+            /*List<String> personas = new List<String>();
+
+            personas.Add("Birdman, 2018");
+            personas.Add("12 años de esclavitud, 2014");
+            personas.Add("El artista, 2012");
+            personas.Add("Bohemian Rhapsody, 2018");
+            personas.Add("Shakespeare in love, 1999");
+            foreach (string s in personas)
+
+            Console.WriteLine(s);*/
+
+            List<Pelicula> peliculas = new List<Pelicula>();
+
+			peliculas.Add(new Pelicula("La forma del agua", 2017));
+            peliculas.Add(new Pelicula("Birdman", 2018));
+            peliculas.Add(new Pelicula("El artista", 2012));
+            peliculas.Add(new Pelicula("Bohemian Rhapsody", 2018));
+            peliculas.Add(new Pelicula("Shakespeare in love", 1999));
+
+            foreach(Pelicula s in peliculas)
+            {
+                s.imprime();
+            }
             
         }
     }
