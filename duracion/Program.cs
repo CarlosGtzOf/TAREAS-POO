@@ -5,26 +5,27 @@ namespace duracion
 
     class Duracion
     {
-        private double segundos;
+        //private double segundos;
+        private double horas, minutos , segundos;
 
-        /*public Duracion(int h, int m, int s)
+        public Duracion(double h, double m, double s)
         {
             horas = h;
             minutos = m;
             segundos = s;
-        }*/
+        }
 
         public Duracion(double seg)
         {
             segundos = seg;
         }
 
-        public Duracion(int h, int m, int s)
+        /*public Duracion(double hr, double mi, double sg)
         {  
-            segundos = h * 60 * 60;
-            segundos += m * 60;
-            segundos += s;
-        }
+            segundos = hr * 60 * 60;
+            segundos += mi * 60;
+            segundos += sg;
+        }*/
 
         public double A_horas()
         {
@@ -39,12 +40,20 @@ namespace duracion
             return Math.Floor(segundos);
         }
 
+        public static Duracion operator +(Duracion a, Duracion b)
+        {
+            double h=0,m=0,s = 0;
+
+            h = ((a.horas + b.horas)*60)/60;
+            m = (a.minutos + b.minutos);
+            s = (a.segundos + b.segundos);
+
+            return new Duracion(Math.Floor(h), Math.Floor(m), Math.Floor(s));
+        }
+
         public void print()
         {
-            double h = Math.Floor(A_horas());
-            double m = Math.Floor((segundos - (60*60*h))/60);
-            double s = Math.Floor((segundos - (60*60*h) - (60*m)));
-            Console.WriteLine($"{h} | {m} | {s}");
+            Console.WriteLine($"{horas}:{minutos}:{segundos}");
         }
     }
 
@@ -52,13 +61,15 @@ namespace duracion
     {
         static void Main(string[] args)
         {
-            Duracion P = new Duracion(02, 15, 12);
-            Duracion C = new Duracion(00, 02, 15);
-            Duracion Pa = new Duracion(02, 00, 10);
-            P.print();
-            C.print();
-            Pa.print();
-
+            Duracion a = new Duracion(02, 15, 12);
+            Duracion b = new Duracion(00, 02, 15);
+            Duracion c = new Duracion(02, 00, 10);
+            Duracion e;
+            a.print();
+            b.print();
+            c.print();
+            e = a+b;
+            e.print();
         }
     }
 }
