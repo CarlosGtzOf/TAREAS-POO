@@ -5,18 +5,14 @@ namespace figura
 {
     abstract class Figura
     {
-        protected int ancho, alto;
         protected int px, py;
-        protected string color_relleno, color_borde;
+        protected string color;
 
-        public Figura(int ancho, int alto, int px, int py, string color_relleno, string color_borde)
+        public Figura(int px, int py, string color)
         {
-            this.ancho = ancho;
-            this.alto = alto;
             this.px = px;
             this.py = py;
-            this.color_relleno = color_relleno;
-            this.color_borde = color_borde;
+            this.color = color;
 
         }
 
@@ -26,13 +22,24 @@ namespace figura
 
     class Rectangulo: Figura
     {
-        public Rectangulo(int ancho, int alto, int px, int py, string color_relleno, string color_borde):base(ancho, alto, px, py, color_relleno, color_borde)
+        public Rectangulo(int px, int py, string color):base(px, py, color)
         {
-        
         }
         public override void dibuja()
         {
-            Console.WriteLine("se dibuja un rectangulo color {0} en x = {1} y y = {2}", color_relleno, px, py);
+            
+            Console.WriteLine($"se dibuja un rectangulo color {color} en x = {px} y y = {py}");
+        }
+    }
+
+     class Circulo : Figura {
+        public Circulo(int px, int py, string color):base(px , py, color)
+        {
+        }
+
+        public override void dibuja()
+        {
+            Console.WriteLine($"se dibuja un circulo color {color} en x = {px} y y = {py}");
         }
     }
     
@@ -41,9 +48,22 @@ namespace figura
     {
         static void Main(string[] args)
         {
+            
             //Figura = figura = new Figura(10,10);
             List<Figura> figuras = new List<Figura>();
-            figuras.Add(new Rectangulo(10, 10, 10, 10, "rojo", "rojo"));
+            figuras.Add(new Rectangulo(10, 10,"verde"));
+            figuras.Add(new Rectangulo(12,13,"rojo"));
+            figuras.Add(new Rectangulo(12,25,"azul"));
+            figuras.Add(new Circulo(13,13,"verde"));
+            figuras.Add(new Circulo(12,13,"rojo"));
+            figuras.Add(new Circulo(11,14,"azul"));
+
+            foreach (var item in figuras)
+            {
+                item.dibuja();
+            }
+            Circulo r = new Circulo(10,10,"rojo");   
+            r.dibuja();
         }
     }
 }
