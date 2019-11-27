@@ -1,0 +1,4 @@
+AQW, Lapiz azul w2, 12.23
+AQW, Lapiz verde w2, 12.23
+AQW, Lapiz negro w2, 22.23
+AQW, Lapiz rojo w2, 22.23

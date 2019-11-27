@@ -104,6 +104,10 @@ namespace Musico
         }
     }
 
+    interface ICompareble
+    {
+        int CompareTo(Baterista b);
+    }
 
     class Program
     { 
@@ -115,6 +119,7 @@ namespace Musico
             grupo.Add(new Bajista("Flea", "Gibson"));
             grupo.Add(new Guitarrista("Alfred", "Red Special"));
             grupo.Add(new Baterista("Charly", "Yamaha"));
+            grupo.Sort();
             foreach(Musico m in grupo)
             {
                 m.Saluda();

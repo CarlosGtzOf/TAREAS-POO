@@ -35,7 +35,10 @@ namespace FaceClone
         {
             
         }
+        public void imprime()
+        {
 
+        }
     }
 
     class Program
