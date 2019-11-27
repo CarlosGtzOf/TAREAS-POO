@@ -6,20 +6,20 @@ namespace pila
         {
             readonly int tamaño;
             int apuntador = 0;
-            T[] elementos;
+            T[] element;
 
             public Pila(int size)
             {
                 tamaño = size;
-                elementos = new T[tamaño];
+                element = new T[tamaño];
             }
 
-            public void Push(T elementos)
+            public void Push(T elemento)
             {
-                if(apuntador < tamaño)
+                if(apuntador >= tamaño)
                 {
                     throw new StackOverflowException();
-                    this.elementos[apuntador] = elementos;
+                    element[apuntador] = elemento;
                     apuntador++;    
                 }
                 else
@@ -33,7 +33,7 @@ namespace pila
                 apuntador--;
                 if(apuntador >= 0)
                 {
-                    return elementos[apuntador];
+                    return element[apuntador];
                 }
                 else
                 {
